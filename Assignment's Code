@@ -1,0 +1,46 @@
+//Final Second Semester Assignment
+import java.util.Scanner;
+public class Assignment
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        String []ID = new String[8];
+        int []hours = new int[8];
+        char target;
+        int total;
+        
+        for (int i=0; i<8; i++)
+        {
+            System.out.println("Enter ID for player " + (i+1) + ":");
+            String fullID = sc.nextLine();
+            char region = fullID.charAt(0);
+            ID[i] = fullID;
+            
+            System.out.println("Enter active play duration for player " + (i+1) + ":");
+            hours[i] = sc.nextInt();
+            sc.nextLine();
+        }
+        
+        System.out.println("Enter your region: ");
+        target = sc.next().charAt(0);
+        int count = 0;
+        for (int i=0; i<ID.length; i++)
+        {
+            char enteredRegion = ID[i].charAt(0);
+            if (target == enteredRegion)
+            {
+               count++;
+               System.out.println("Index found at: " + i);
+               System.out.println("Active play duration: " + hours[i]);
+            }
+        }
+        
+        if (count == 0)
+        {
+            System.out.println("Error: No players found in this region");
+        }
+        System.out.println("Total players connected to region " + target + ": " + count);
+    } 
+}   
