@@ -2,8 +2,8 @@
 Question:
 Develop a Java program for an online multiplayer game to track a player. The program must utilize two
 arrays:
-(a) The first array to store the player ID’s (For example: A0010, U0034, E1045)
-(b) The second array to store the active play durations in hours for 8 players.
+- (a) The first array to store the player ID’s (For example: A0010, U0034, E1045)
+- (b) The second array to store the active play durations in hours for 8 players.
 The program should prompt the user to input the player ID and active play duration for each player.
 From each player ID, extract and store the first character, which represents the designated server region
 (For example: 'A' represents Asia server, ‘U’ represents United States, E represents Europe and so
